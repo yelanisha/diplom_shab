@@ -1,7 +1,10 @@
 <?php
 
 use App\Http\Controllers\ProfileController;
+use App\Http\Controllers\PerformanceController;
 use Illuminate\Support\Facades\Route;
+use App\Models\Performance;
+
 
 Route::get('/', function () {
     return view('welcome');
