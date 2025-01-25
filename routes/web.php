@@ -3,11 +3,22 @@
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\PerformanceController;
 use Illuminate\Support\Facades\Route;
+use Illuminate\Support\Facades\Auth;
 use App\Models\Performance;
 
 
 Route::get('/', function () {
     return view('welcome');
+});
+
+Route::resource('/performances', PerformanceController::class);
+
+Route::get('/about_us', function (){
+    return view('/about_us');
+});
+
+Route::get('/about_village', function (){
+    return view('/about_village');
 });
 
 Route::get('/dashboard', function () {
